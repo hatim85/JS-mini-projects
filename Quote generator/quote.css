@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: lightblue;
+}
+.quotebox {
+  background: white;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.quotebox h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.quotebox h2::after {
+  content: "";
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgb(23, 124, 229);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.quotebox blockquote {
+  font-size: 25px;
+  min-height: 110px;
+  text-align: justify;
+}
+.quotebox blockquote::before,
+.quotebox blockquote::after {
+  content: '"';
+}
+.quotebox span {
+  display: block;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+.quotebox span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: rgb(23, 124, 229);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+.quotebox div {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.quotebox button {
+  background: rgb(23, 124, 229);
+  color: white;
+  border-radius: 25px;
+  border: 1 solid rgb(23, 124, 229);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+}
+.quotebox button img {
+  width: 20px;
+  margin-right: 10px;
+}
+#twitterimage {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.quotebox button:nth-child(2) {
+  background: transparent;
+  color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  .quotebox {
+    width: 80%;
+    height: auto;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, blue, white);
+    color: white;
+    padding: 3vw;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 600px;
+    /* margin-left: 10%; */
+    margin-top: 10%;
+}
+
+.calculator title {
+    font-size: 60px;
+}
+
+.calculator .title .sub-title {
+    color: yellow;
+}
+
+.inputbox {
+    margin: 40px 0;
+    padding: 35px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.inputbox input {
+    flex: 1;
+    margin-right: 20px;
+    padding: 14px 20px;
+    border: 0;
+    outline: 0;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.inputbox button {
+    background: yellow;
+    border: 0;
+    outline: 0;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}
+
+.inputbox input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    width: 30px; 
+    height: 30px; 
+    background: url('calendar.svg') no-repeat; 
+    background-size: cover;
+    cursor: pointer;
+}
+.inputbox #date{
+    cursor: text;
+}
+#result{
+    font-size: 20px;
+}
+#result .sub-title{
+    color: yellow;
+}
+
+@media screen and (max-width:700px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .sub-title{
+        font-size: 7vh;
+    }
+    .calculator{
+        width: 100%;
+    }
+    .inputbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    input{
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .inputbox button{
+        width: 100%;
+    }
+}
