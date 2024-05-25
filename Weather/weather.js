@@ -1,11 +1,11 @@
-const apikey = "5aad527de8e054696fc31a0e1aba6e4e"
+import { weatherApiKey } from "../config.js"
 const apiurl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q="
 const searchbox = document.querySelector(".search input")
 const searchbutton = document.querySelector(".search button")
 const textenter=document.querySelector(".inp")
 const weathericon = document.querySelector(".weather-icon")
 async function checkweather(city) {
-    const response = await fetch(apiurl + city + `&appid=${apikey}`);
+    const response = await fetch(apiurl + city + `&appid=${weatherApiKey}`);
     if (response.status == 404) {
         document.querySelector(".error").style.display = "block"
         document.querySelector(".weather").style.display = "none"

@@ -1,15 +1,15 @@
+import { imageAccessKey } from "../config.js";
 const searchform = document.getElementById("search-form");
 const searchbox = document.getElementById("search-box");
 const searchresult = document.getElementById("search-result");
 const showmore = document.getElementById("show-more");
-const accesskey="oKk0LxarTVvdVRTJLnSOsLqEgXWu7yRUYJD2LCO0Vaw";
 
 let keyword = "";
 let page = 1;
 
 async function searchImages() {
     keyword = searchbox.value;
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accesskey}&per_page=12`;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${imageAccessKey}&per_page=12`;
     const response=await fetch(url);
     const data=await response.json();
     if(page===1){
