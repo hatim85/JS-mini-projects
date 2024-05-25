@@ -1,4 +1,4 @@
-import { imageAccessKey } from "../config.js";
+const imageAccessKey="oKk0LxarTVvdVRTJLnSOsLqEgXWu7yRUYJD2LCO0Vaw"
 const searchform = document.getElementById("search-form");
 const searchbox = document.getElementById("search-box");
 const searchresult = document.getElementById("search-result");

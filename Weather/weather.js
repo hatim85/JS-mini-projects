@@ -1,4 +1,4 @@
-import { weatherApiKey } from "../config.js"
+const weatherApiKey="5aad527de8e054696fc31a0e1aba6e4e"
 const apiurl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q="
 const searchbox = document.querySelector(".search input")
 const searchbutton = document.querySelector(".search button")
